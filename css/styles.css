@@ -91,6 +91,23 @@ ol {
   color: #404bbf;
 }
 
+.nav-link:active::after {
+  content: "";
+  display: block;
+
+  background-color: #404bbf;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  border-radius: 2px;
+  width: 48px;
+  height: 4px;
+}
+
+.nav-list li {
+  position: relative;
+}
+
 .address {
   font-style: normal;
   margin-left: auto;
@@ -109,13 +126,15 @@ ol {
   color: #434455;
 }
 
-.list-address:hover,
-.list-address:focus {
+.address-link:hover,
+.address-link:focus {
   color: #404bbf;
 }
 
 .first-section {
   background-color: #2e2f42;
+  width: 1440px;
+  margin: 0 auto;
   padding: 188px 0;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
@@ -210,11 +229,17 @@ ol {
 .qualities-icon-container {
   display: flex;
   align-items: center;
+  justify-content: center;
+  height: 112px;
   background-color: #f4f4fd;
   border: 1px solid #8e8f99;
   border-radius: 4px;
   padding: 24px 100px;
   margin-bottom: 8px;
+}
+
+.qualities-icon {
+  overflow: visible;
 }
 
 .features {
@@ -321,12 +346,33 @@ ol {
 
 .fourth-section-picture {
   width: calc((100% - 48px) / 3);
+  position: relative;
+}
+
+.hover-content {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 360px;
+  height: 300px;
+  background-color: #404bbf;
+  color: white;
+  padding: 16px;
+  box-sizing: border-box;
+  overflow: auto;
+  text-align: left;
+}
+
+.fourth-section-picture:nth-child(2):active .hover-content {
+  display: block;
 }
 
 .apps-descr {
   padding: 32px 16px;
   border: 1px solid #e7e9fc;
   border-top: none;
+  cursor: pointer;
 }
 
 .fourth-section-name {
