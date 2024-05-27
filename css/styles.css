@@ -82,12 +82,24 @@ ol {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: #404bbf
+  color: #2e2f42;
+  list-style-type: none;
+  padding: 24px 0;
+  display: block;
+}
+
+.nav-link-underline {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #404bbf;
   list-style-type: none;
   padding: 24px 0;
   display: block;
   position: relative;
- transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-link:hover,
@@ -95,7 +107,7 @@ ol {
   color: #404bbf;
 }
 
-.nav-link::after {
+.nav-link-underline::after {
   content: "";
   display: block;
   width: 100%;
@@ -104,7 +116,6 @@ ol {
   bottom: -1px;
   left: 0;
   border-radius: 2px;
-
   height: 4px;
 }
 
@@ -292,7 +303,7 @@ ol {
 
 .picture {
   background-color: #ffffff;
-  width: calc((100% - 72px) / 4);
+
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
@@ -302,21 +313,15 @@ ol {
   padding: 32px 0;
 }
 
-
-
 .socials-list {
   display: flex;
   gap: 24px;
   justify-content: center;
-  padding-left: 16px;
-  padding-right: 16px;
-  
 }
 
 .socials-item {
   width: 40px;
   height: 40px;
-  margin: 0 auto;
 }
 
 .socials-link {
@@ -332,12 +337,11 @@ ol {
 
 .socials-link:hover,
 .socials-link:focus {
- background-color: #404bbf;
+  background-color: #404bbf;
 }
 
 .our-team-socials-icon {
   fill: #f4f4fd;
-  
 }
 
 .name {
@@ -348,7 +352,6 @@ ol {
   color: #2e2f42;
   padding-bottom: 8px;
   text-align: center;
-  padding-top: 32px;
 }
 
 .description {
@@ -358,7 +361,7 @@ ol {
   letter-spacing: 0.02em;
   color: #434455;
   text-align: center;
-  padding-bottom: 8px;
+  margin-bottom: 8px;
 }
 
 .fourth-section {
@@ -380,47 +383,37 @@ ol {
 }
 
 .fourth-section-picture:hover {
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
-.overlay {
+.img-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay-text {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 360px;
-  height: 300px;
-  background-color: #4d5ae5;
-  color: white;
-  padding: 16px;
-  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
-    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
-  text-align: left;
-  transform: translateY(100%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.fourth-section-picture:hover .overlay {
-  display: block;
-  transform: translateY(-40%);
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-}
-
-.fourth-section-picture img {
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.overlay p {
-  font-weight: 400;
+  top: 0;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #f4f4fd;
-  padding-top: 40px;
-  padding-right: 32px;
-  padding-bottom: 0;
-  padding-left: 32px;
+  padding: 40px 32px;
+  width: 100%;
+  height: 100%;
+  background-color: #4d5ae5;
+  color: white;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fourth-section-picture:hover .overlay-text {
+  transform: translateY(0%);
+}
+
+.fourth-section-picture img {
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .apps-descr {
