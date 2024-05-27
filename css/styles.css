@@ -34,6 +34,8 @@ ol {
 
 .header {
   border-bottom: 1px solid #e7e9fc;
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .header-container {
@@ -80,10 +82,12 @@ ol {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: #2e2f42;
+  color: #404bbf
   list-style-type: none;
   padding: 24px 0;
   display: block;
+  position: relative;
+ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
 .nav-link:hover,
@@ -91,7 +95,7 @@ ol {
   color: #404bbf;
 }
 
-.nav-link:active::after {
+.nav-link::after {
   content: "";
   display: block;
   width: 100%;
@@ -134,7 +138,7 @@ ol {
 
 .first-section {
   background-color: #2e2f42;
-  width: 1440px;
+  max-width: 1440px;
   margin: 0 auto;
   padding: 188px 0;
   background-image: linear-gradient(
@@ -295,14 +299,15 @@ ol {
 }
 
 .team-descr {
-  padding: 32px 16px;
-  padding-bottom: 8px;
+  padding: 32px 0;
+  
 }
 
 .socials-list {
   display: flex;
   gap: 24px;
-  padding: 0 16px 32px 16px;
+  justify-content: center;
+  
 }
 
 .socials-item {
@@ -322,8 +327,14 @@ ol {
   height: 100%;
 }
 
+.socials-link:hover,
+.socials-link:focus {
+ background-color: #404bbf;
+}
+
 .our-team-socials-icon {
-  fill: #fff;
+  fill: #f4f4fd;
+  
 }
 
 .name {
@@ -334,6 +345,7 @@ ol {
   color: #2e2f42;
   padding-bottom: 8px;
   text-align: center;
+  padding-top: 32px;
 }
 
 .description {
@@ -343,6 +355,7 @@ ol {
   letter-spacing: 0.02em;
   color: #434455;
   text-align: center;
+  padding-bottom: 8px;
 }
 
 .fourth-section {
@@ -484,7 +497,7 @@ ol {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #fff;
-  padding-bottom: 16px;
+  margin-bottom: 16px;
 }
 
 .footer-socials-list {
@@ -514,17 +527,18 @@ ol {
 }
 
 .footer-socials-icon {
-  fill: #fff;
+  fill: #f4f4fd;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer-socials-link:hover {
+.footer-socials-link:hover,
+.footer-socials-link:focus {
   background-color: #31d0aa;
 }
 
 .footer-container {
   display: flex;
-  align-items: flex-start;
+  align-items: baseline;
 }
 
 .footer-text-container {
